@@ -1,0 +1,31 @@
+Data Science Specialization: Capstone report 1
+===================================
+
+## Description
+Current short report is a result of quick review of the data, provided for the Capstone project of this specialization.
+Analysis was performed with the help of 'tm' package widely used in R for text-mining purposes. Only English part of
+provided data was analyzed. Parameters of interest were lengths of the entries, mostly frequent words and usage of
+punctuation characters, such as ellipsis, exclamation marks, question marks.
+
+To speed-up the calculations and meet memory constraints (machine on which the analysis was performed has only 4 GB of
+RAM), not whole English datasets were used, but only randomly selected 100 000 entries from each dataset.
+
+When counting frequencies of the words, numbers, punctuation characters and English stop-words were excluded from the
+analysis by means of 'tm' built-in data-processing functions.
+
+
+### 1. Parameters for the NEWS dataset
+```{r echo = FALSE}
+	source('proc_ze_data.R');
+	proc_ze_data('news_res.RData', 'NEWS');
+```
+
+### 2. Parameters for the TWITTER dataset
+```{r echo = FALSE}
+	proc_ze_data('twitter_res.RData', 'TWITS');
+```
+
+### 3. Parameters for the BLOGS dataset
+```{r echo = FALSE}
+	proc_ze_data('blogs_res.RData', 'BLOGS');
+```

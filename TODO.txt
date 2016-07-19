@@ -1,0 +1,14 @@
+
+1) purge all the input data with :
+  TST = readLines('tst_data.txt', -1)
+  TST1 = tolower(TST)
+  TST2 = gsub('[^A-Za-z0-9 ]+', '', TST1)
+
+2) run pre-processing one more time
+3) try to build 3-grams
+4) major order of pre-processing the data:
+ - clear_input_data(filename ... ) use length ~100000 for twatter, about 70000 for blogs and about 40000 for news
+ - make_tables_from_data () this one basically creates n-gram-tables
+ - combine_matrices() - combining all tables to one huge uber-table and clearing rear terms
+ - merge_sorted_ngram_by_parts(filename, part_size = 20000) - combine all repeated terms and create final 'MODEL'
+

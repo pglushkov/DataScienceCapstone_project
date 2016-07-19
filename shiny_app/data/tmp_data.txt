@@ -1,0 +1,4 @@
+le_number;le_value
+1;le_string1
+2;le_string2
+3;le_string3
